@@ -1,0 +1,7 @@
+.deleteButton {
+  display: inline-block;
+  float: right;
+  cursor: pointer;
+  font-weight: bold;
+  color: rgb(0, 127, 255);
+}
