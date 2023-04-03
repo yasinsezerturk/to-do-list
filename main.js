@@ -18,6 +18,15 @@ addTodoButton.addEventListener("click", function (e) {
     paragraph.appendChild(deleteButton);
     e.preventDefault();
   }
+  setTimeout(() => {
+    var box = document.getElementById("hideWarning");
+    box.style.visibility = "visible";
+  }, 0000);
+
+  setTimeout(() => {
+    var box = document.getElementById("hideWarning");
+    box.style.visibility = "hidden";
+  }, 1000);
   deleteButton.addEventListener("click", function () {
     contentDiv.removeChild(paragraph);
   });
@@ -27,8 +36,8 @@ addTodoButton.addEventListener("click", function (e) {
   });
 
   searchInput.addEventListener("keyup", searchTodo);
-  function searchTodo(e) {
-    const text = e.target.value.toLowerCase();
+  function searchTodo(t) {
+    const text = t.target.value.toLowerCase();
     const allItem = document.querySelectorAll("p");
     for (let task of allItem) {
       const item = task.textContent;

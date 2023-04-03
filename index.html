@@ -36,6 +36,7 @@
                     class="form-control mt-3 w-50"
                     id="inputTask"
                     placeholder="Enter a Todo"
+                    onclick="this.value=''"
                   />
                   <button
                     type="submit"
@@ -47,7 +48,13 @@
                 </div>
               </form>
               <hr />
-              <div></div>
+              <div
+                class="bg-success bg-opacity-25"
+                style="visibility: hidden"
+                id="hideWarning"
+              >
+                <p>Added new Todo to UI</p>
+              </div>
               <hr />
 
               <div class="form-group">
